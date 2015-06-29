@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en-US">
+<head>
+
+<!--standard meta-->
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+   
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!--unique meta-->
+
+<title>$100 Word Game Variant</title>
+    
+<link href='resources/favicon.ico' rel='icon' type='image/ico'/>    
+
+<meta name="description" content=""/>
+        
+<meta name="author" content="" />
+
+<!--CDN and local support files-->
+
+<!-- <!-- Core Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Local custom CSS -->
+   
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    
+</head>
+
+<body style="background-color: white; font-family: "Roboto" ">
+
+<div class="container FAQ">
+        <div class="row">
+                <div class="col-lg-2">    
+                </div>
+                  <div class="col-lg-8">    
+                  <br>
+                  <br>
+                  <p>Brief Explanation</p>
+                  <p><br>
+
+
+In third grade, I was lucky to have an extremely demanding teacher who challenged her students with additional exercises beyond the heavy amount of homework she regularly assigned. For these extra efforts, Ms. Shofner often sweetened the deal with bribes in the form of candy or some sort of trite privilege that let a student tower over his or her peers in the classroom.<br>
+<br>
+
+One of these cases involved something called the 100 dollar word game. It goes like this: You sort through your dictionary or your mind and try to find words whose letters add up to 100 with the values of letters being their place in the alphabet (a=1, b=2, c=3 and so on). It was a mix of intuition, arithmetic and vocabulary that was perfect for our age and skill level. As a motivation, she created a poster to track what words were found and who had claim to them. For every set amount reached (I think 4), we’d win a small candy bar. This was all pre-Internet days and we were on our own except for calculators but she expected this. The exercise was still constrained.<br><br>
+
+I proved quite apt at the game and quickly started racking up my score, earning the reward here and there. But after awhile, it seemed as though all the easy wins had been had. Like the rest of my fellow classmates, I became bored with the tediousness of calculating contenders. One day it suddenly occurred to me that I needed a faster way to evaluate possible words and that I actually had the tool in my living room plugged into our TV. While I wasn’t gifted at coding at that age or had the discipline to teach myself, BASIC on the Commodore 64 was pretty straightforward and in just a few minutes, I set up a small program that vastly accelerated the speed of my word search. In short order, I was bringing in lists of 100 dollar words longer than Ms. Shofner had ever seen.<br><br>
+
+A+S+T+E+R+O+I+D = 100<br><br>
+
+Software was already eating the world by the 80’s. The reward of my cunning only lasted a short while before she sussed it out and brought the game to a premature close. The memory of it then drifted back into the recesses of my mind until recently when something, somehow, drew it back.<br><br>
+
+Fast forward to today and the Internet has certainly ruined it for younger generations. A quick query, for instance, found a Python script that uses a Linux desktop dictionary to output all 100 dollar words. The total: 2302 in a file for all the world’s children to see. Candy that could have been.<br><br>
+
+https://gist.github.com/peterjmag/3753666<br><br>
+
+Curious, I modified the code with a while loop to determine the number of words with values 1 to 300. I wasn’t sure how high it’d go…My laptop took a satisfying minute to process my question, making the experience all the more reminiscent.<br><br>
+
+//<br><br>
+
+import string<br><br>
+
+winning_list = []<br><br>
+
+count = 1<br><br>
+
+while count <=300:<br><br>
+
+&nbsp; &nbsp; letter_values = dict((l, i) for i, l in enumerate(string.lowercase, start=1))<br><br>
+
+&nbsp; &nbsp; english_dict = open(‘/usr/share/dict/words’, ‘rU’)<br><br>
+
+&nbsp; &nbsp; winning_words = []<br><br>
+
+&nbsp; &nbsp; for word in english_dict:<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp; word = word.rstrip().replace(‘-‘, ”)<br>
+&nbsp; &nbsp; &nbsp; &nbsp; value = sum([letter_values[l.lower()] for l in word])<br>
+&nbsp; &nbsp; &nbsp; &nbsp; if value is count:<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp; winning_words.append(word)<br><br>
+
+&nbsp; &nbsp; totalup = len(winning_words)<br>
+&nbsp; &nbsp; winning_list.append(totalup)<br><br>
+
+&nbsp; &nbsp; count += 1<br><br>
+
+print winning_list<br><br>
+
+//<br><br>
+It turns out 300 was overkill but not too far off.<br><br>
+
+[2, 3, 4, 5, 6, 9, 8, 11, 13, 20, 11, 20, 23, 21, 29, 38, 44, 45, 60, 69, 72, 78, 104, 106, 116, 137, 153, 168, 185, 243, 246, 262, 278, 295, 302, 340, 368, 420, 436, 495, 486, 554, 536, 603, 598, 647, 689, 753, 757, 801, 840, 909, 968, 1021, 1005, 1087, 1047, 1099, 1128, 1142, 1232, 1282, 1343, 1332, 1367, 1420, 1460, 1444, 1519, 1618, 1630, 1640, 1670, 1814, 1748, 1773, 1878, 1771, 1919, 1924, 1970, 1973, 2010, 1959, 2052, 2091, 2130, 2126, 2113, 2065, 2175, 2211, 2217, 2170, 2174, 2239, 2316, 2275, 2194, 2296, 2271, 2356, 2211, 2258, 2177, 2220, 2331, 2265, 2227, 2264, 2228, 2170, 2216, 2204, 2274, 2247, 2180, 2219, 2044, 2175, 2076, 2136, 2116, 2057, 1999, 2001, 2065, 1939, 1956, 1968, 1893, 1870, 1773, 1841, 1818, 1738, 1677, 1725, 1666, 1683, 1577, 1534, 1477, 1470, 1534, 1440, 1374, 1401, 1362, 1384, 1316, 1270, 1176, 1227, 1199, 1126, 1135, 1142, 1101, 1070, 991, 1014, 986, 976, 900, 937, 832, 828, 808, 766, 776, 739, 727, 675, 680, 628, 636, 655, 617, 598, 557, 526, 535, 506, 491, 455, 485, 437, 434, 417, 411, 360, 380, 370, 330, 310, 318, 301, 296, 322, 253, 234, 256, 255, 202, 211, 208, 166, 176, 175, 172, 178, 157, 134, 141, 160, 140, 132, 119, 115, 107, 107, 89, 101, 93, 79, 82, 65, 63, 67, 58, 70, 61, 53, 65, 32, 53, 42, 54, 39, 51, 28, 29, 25, 33, 29, 26, 35, 27, 22, 24, 15, 13, 15, 12, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]<br><br>
+
+It tops out with 14 words coming in at the 256 value. I dropped the above into a spreadsheet to see what the distribution looks like.<br><br> Fairly normal:<br><br>
+
+<img src="resources/pythonoutput.jpg">
+<br><br>
+Now, what deep insight can we gain about the English language from this? ABSOLUTELY NOTHING.<br><br>
+
+However, despite the triviality, it helped me a little for a small web-based demo game I threw together last week. I’m not experienced at game design but I had a notion that maybe something could be made out of this. Rather than concentrate on the 100 value, I chose to challenge the player to shoot for random values (with variable margins of forgiving error to keep the pace moving quickly). To add a constraint, each prompt would specify a required first letter for world.<br><br>
+
+http://www.minnixos.com/demos/shofner/index.html<br><br>
+
+No real surprises in construction. Monkey stuff for the most part. I initially had thoughts of making it responsive and playable by mobile/table but I decided it didn’t jive with the intended speed of play. It’s really a game for a fast touch typist and it makes more sense to just go on and lay it all out for the relatively large display of a desktop or laptop.<br><br>
+
+I’m still improving my understanding and use of jQuery but the functions came easier than I expected. It looks clean and logical to me (though I’m sure it’s messy and inefficient to experienced eyes). The above Python script helped with establishing of variables. I settled on a formula that randomly selects a target w/a minimum floor of 40 and ceiling of 170. All targets are rounded to the nearest fifth place. I also put in conditionals that gave a broader leeway with higher value targets (and thus, longer, more complicated words). Values 80 and under only get plus/minus 5 (therefore, a range of 10). Between 81 and 140, plus/minus 10 (range of 20). And above that, 15 (range of 30).<br><br>
+
+Obviously, the hardest part of this was in evaluating the player’s candidate word for validity. In other words, the Scrabble problem: is that really a word? I didn’t feel it’d be complete without this functionality. It wouldn’t be legit. Unfortunately, I don’t have deep experience with the possible solutions. The choice to me seemed: Stick my own dictionary/word database on my own server folder and run the evaluation myself OR throw it out to some API that’d ping back yay/nay. I chose the latter thinking it’d be simple but it shouldn’t be a surprise that it wasn’t.<br><br>
+
+Any Google query comes back with dozens of various solutions to variations of the word check problem. Many out of date and dysfunctional. Unfortunately, most of the solid ideas are based on some approach that asks for the dictionary definition, not simple yay/nay. I decided to go w/Dictionary.com’s simple GET API w/XML. Freebie 1000 hits a day. I’m not worried about beating that.<br><br>
+
+I soon found I was going to face the same problem I’ve had once before with “same-domain” issues: inability to parse an xml from a different domain. The quickest fix I’ve found is to route through Yahoo’s YQL console. It works well…when it works. I’ve seen it blackout before so I’d never build anything mission critical using its service. For the time being, however, it fills my needs.<br><br>
+
+Onwards.<br><br>
+
+Not a problem. Easy I think. Yes, no – it is or isn’t a word. If I get a definition back, it’s a word. If not, it isn’t.<br><br>
+
+The problem is that you get a file back regardless without a clear answer in any specific field. So, time to improvise. Experimenting, I determine three XML file scenarios:<br><br>
+
+valid word<br>
+invalid word (no suggestions; i.e. “sdfavdfkd”)<br>
+invalid word (suggestion; i.e. “sadd” -> w/suggestion list “sad…”)<br>
+I played around and found that the only consistent difference between 1 and 2,3 is the presence of a 'dt' tag in valid word files…so I use this as my litmus test.<br><br>
+
+var xmlhttp;<br>
+xmlhttp = new XMLHttpRequest();<br>
+
+xmlhttp.open(“GET”,”https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D’http%3A%2F%2Fwww.dictionaryapi.com%2Fapi%2Fv1%2Freferences%2Fcollegiate%2Fxml%2F”+candidate+”%3B%3Fkey%3D8c5db828-ab8e-464b-96a4-044947d5fe3c’&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys”,false);<br><br>
+
+xmlhttp.send();<br>
+xmlDoc=xmlhttp.responseXML;<br><br>
+
+if(xmlDoc.getElementsByTagName(“dt”).length == 0 )<br>
+{ $(“#feedback”).text(“Sorry, word rejected by dictionary.”);<br>
+return;<br>
+}<br><br>
+Does the job.<br><br>
+
+I was also worried about the timer functionality but, obviously, it just made sense to go with a jQuery plugin and I found one with http://harshen.github.io/jquery-countdownTimer that fit quite well and quickly, working perfectly.<br><br>
+
+All good.<br>
+<br>
+<br>
+
+</div>
+
+
+<!-- Analytics  -->
+    
+<script>
+
+</script>
+
+
+</body>
+
+</html>
