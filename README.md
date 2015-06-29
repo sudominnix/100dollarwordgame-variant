@@ -20,6 +20,8 @@ All code is included in this repository except for the two jquery functions I re
 Remodal by Ilya Makarov ( http://vodkabears.github.io/remodal/ )<br>
 CountdownTimer by Harshen Pandey ( https://github.com/harshen/jquery-countdownTimer ) 
 
+These need to be in your root directory alongside index.html.
+
 The versions of the above that I have on the demo are probably outdated. 
 
 
