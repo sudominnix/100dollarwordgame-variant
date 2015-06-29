@@ -68,10 +68,13 @@ function wordSubmit(candidate){
     
     //XML creation to check if candidate word is valid 
     //uses Dictionary.com API via Yahoo YQL xml file creator to bypass cross-domain issue
+    //important note: in this code, the API key is nixed. You can get your own free one at Dictionary.com's dev site
+    //the key should be placed in the below line where XXXXXXXXXXXXXXXXXXXX is (that's 20 X's) ... no spaces on either side and no other changes are necessary.
+    
     var xmlhttp;
 	xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("GET","https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'http%3A%2F%2Fwww.dictionaryapi.com%2Fapi%2Fv1%2Freferences%2Fcollegiate%2Fxml%2F"+candidate+"%3B%3Fkey%3D8c5db828-ab8e-464b-96a4-044947d5fe3c'&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",false);
+    xmlhttp.open("GET","https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'http%3A%2F%2Fwww.dictionaryapi.com%2Fapi%2Fv1%2Freferences%2Fcollegiate%2Fxml%2F"+candidate+"%3B%3Fkey%3DXXXXXXXXXXXXXXXXXXXX'&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",false);
 	xmlhttp.send();
 	xmlDoc=xmlhttp.responseXML;
 
