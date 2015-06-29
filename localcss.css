@@ -1,0 +1,185 @@
+html {
+  position: relative;
+  height: 100%;
+   width: 100%;
+  background-color:white;
+  font-color:black;
+   font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color:white;
+  font-color:black;
+font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+
+}
+
+.fullheight {
+    height: 100%;
+    width: 100%;
+}
+
+#namegame {
+    padding: 10px 0px 10px 0px;
+}
+
+
+.logo {
+    max-width:30%;
+    min-width:30%;
+    border-radius: 200px;
+    margin-top: 1%;
+    padding-top: 30px;
+}
+
+#logo {
+    text-align: center;
+}
+
+.emphasis, .emphasisblue, .dashboardtext {
+    padding: 5px 30px 5px 30px;
+}
+
+.emphasisblue {
+    color: blue;
+    font-weight: bold;
+}
+
+.dashconsole {
+
+/*    margin-top: 40px;
+    background-color: white;
+    margin-left: 90px;
+    margin-right: 90px;*/
+    
+
+}
+
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    font-variant: small-caps;
+    
+}
+
+.tablestyle {
+    font-size: 1.8em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.dashboardtext {
+    color: black;
+}
+
+h4 {
+    font-size: 1.9em;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.leftfooter {
+    margin-top: 100%;
+}
+
+.leftbar {
+    text-align: center;
+    text-decoration: none;
+}
+
+a {color: black;}    
+a:visited {color: black;} 
+a:hover {color: grey;}
+a:active {color: black;}  
+
+#feedback {
+    color: #f4eaea;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.liner {
+    border-color: black;
+    border-width: 0px 5px 0px 5px;
+    border-style:solid;
+}
+
+.centerpane {
+    padding-top: 10px;
+    text-align: center;
+    height: 100%;
+    background-color: #860505;
+}
+
+#pointscore {
+    font-size: 3em;
+    padding: 20px 0px 20px 0px;
+    color: white;
+}
+
+
+#wordinput {
+    font-size: 2em;
+    font-variant: normal;
+    width: 70%;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+    
+}
+
+.rightbar {
+    padding-top: 10px;
+    color: #bcb9b9;
+    text-align: center;
+    line-height: 90%;
+    font-size: 13px;
+    
+}
+
+.top {
+    margin-top: 30px;
+    color: black;
+}
+
+
+.emphasis {
+    font-weight: bold;
+}
+
+
+.submitbutton, .passbutton, .newbutton {
+    height: 30px;
+    width: 100px;
+    color: black;
+    background-color: #dedede;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: center;
+    padding: 5px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.submitbutton:hover, .passbutton:hover, .newbutton:hover {
+	background-color: #b3b5b3;
+}
