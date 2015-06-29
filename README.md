@@ -16,9 +16,9 @@ NOTE:
 
 The dictionary.com API requires a key and I've nixed it out in the repository. Securing your own is easy and free (at least for a limited number of queries per day). You can grab own of your quickly enough on their site. 
 
-All code is included in this repository except for the two jquery functions I relied on:
--remodal by Ilya Makarov ( http://vodkabears.github.io/remodal/ )
--countdownTimer by Harshen Pandey ( https://github.com/harshen/jquery-countdownTimer ) 
+All code is included in this repository except for the two jquery functions I relied on :<br>
+Remodal by Ilya Makarov ( http://vodkabears.github.io/remodal/ )<br>
+CountdownTimer by Harshen Pandey ( https://github.com/harshen/jquery-countdownTimer ) 
 
 The versions of the above that I have on the demo are probably outdated. 
 
