@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+<!--standard meta-->
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+
+<!--unique meta-->
+
+<title>SHOFNER: Word Letter + Summation Game</title>
+    
+<link href='resources/favicon.ico' rel='icon' type='image/ico'/>    
+
+<meta name="description" content="Stretch your mind with a game that challenges your vocabulary and arithmatic skills at the same time."/>
+    
+<!--CDN and local support files-->
+
+<!-- Core Bootstrap -->
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Local custom CSS -->
+
+<link rel="stylesheet" href="jquery.remodal.css">
+    
+<link rel="stylesheet" type="text/css" href="jquery.countdownTimer.css" />
+    
+<link type="text/css" rel="stylesheet" href="localcss.css" />
+
+<!-- font-family: 'Roboto', sans-serif;  -->
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>    
+
+</head>
+    
+<body>
+
+<div class = "container-fluid fullheight">
+    
+<div class="row fullheight">
+    
+    <div class="col-sm-3">
+        
+        <div id="logo"><img src="resources/logo.jpg" class="logo"></div>
+        <h1 id="namegame">Shofner</h1>
+        <h4>The Vocabulary +</h4>
+        <h4>Summation Game</h4>
+        
+        <div class = "leftfooter">
+       
+        <p class="leftbar"><span class="glyphicon glyphicon-link"></span><em><a class="mylink" href="#show">Instructions</a></em></p> 
+        <p class="leftbar"><span class="glyphicon glyphicon-link"></span><em><a class="mylink" href="exposition.html">Exposition</a></em></p> 
+        <p class="leftbar text-muted">Copyright 2014</p>
+            </div>
+            
+    </div>
+    
+     <div class="col-sm-6 liner centerpane">     
+         <div class = "dashconsole">
+        <table class = "tablestyle">
+            <tr>
+                <td class="dashboardtext">Time Remaining: &nbsp; </td>
+                <td class = "emphasis" id = "timerclock"><span id="more_options"></span></td>
+            </tr>
+            <tr>
+                <td class="dashboardtext">Current Score: &nbsp; </td>
+                <td class = "emphasisblue" id = "score">0</td>
+            </tr>
+            <tr>
+                <td> &nbsp; </td>
+                <td> &nbsp; </td>
+            </tr>
+            <tr>
+                <td class="dashboardtext">First Letter: &nbsp; </td>
+                <td class = "emphasis" id = "firstletter"></td>
+            </tr>
+            <tr>
+                <td class="dashboardtext">Target Value: &nbsp; </td>
+                <td class = "emphasis" id = "target">50</td>
+            </tr>
+            <tr>
+                <td class="dashboardtext">Plus/Minus: &nbsp; </td>
+                <td class = "emphasis" id = "plusminus">10</td>
+            </tr>
+        </table>
+         </div>
+        <p id = "pointscore">0</p>
+            
+         <div id = "wordinputdiv">
+         <input type="text" placeholder="enter your word" name="wordinput" class="input" id="wordinput" autocomplete="off">
+        </div>
+
+        <div class="passbutton" id = "passbutton">Pass</div>
+        <div class="newbutton" id = "newbutton">New Game</div>
+         
+         <div id="feedback"></div>
+        
+         
+        </div>
+    <div class="col-sm-3 rightbar">
+        <p class = "top" >Completed Words</p>
+        <p class = "completed"></p>
+    </div>
+    
+</div>    
+</div>
+
+<!--content for Remodal jquery plugin by Ilya Makarov, Vodkabears-->
+<div class="remodal" data-remodal-id="show">
+    <h1>Instructions</h1>
+  <div class = "leftbox"> 
+    <p>Let's break it down!</p>
+    <p>When you start the game, you'll have five minutes to rack up the most points as you can. You know, pretty standard.</p>
+    <p>To earn points, you have to find words that match the criteria given to you.</p>
+    <p>The 1st criterion is simple and obvious: the first letter of the word.</p>
+    <p>The 2nd is where your brain power and speed come into play. In the input box, you must quickly find a word whose letters sum up to a target value, plus or minus a given amount. When you're ready, hit enter and your word will be verified with a dictionary.</p>
+    <p>For instance, if the target is 50, you need to find a word that consists of letters that add up (a=1, b=2, c=3 and so on) to 50, give or take five. In other words, any value between 45 and 55 will be accepted and you'll move on to the next word. Note that at higher targets, you'll be given more leeway. </p>
+    <p>If you hit a target exactly, you get 20 points. However, for every value away from the target, you get dinged 1 point. </p>
+    <p>As an example, 'hello' comes to 52. With a target of 50, you'd make 18 points because you were two off.</p>
+    <p>Likewise, if you'd like to 'Pass' on a set of criteria, you may but this incurs a loss of 10 points.</p>
+    <p>Good luck! Click "New Game" to begin.</p>
+    </div>
+</div>
+
+<!-- jQuery Version 2.1.3 -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Local Plugin JavaScript -->
+<!--http://vodkabears.github.io/remodal/-->
+<script src="jquery.remodal.min.js"></script>
+    
+<!--http://harshen.github.io/jquery-countdownTimer-->
+    
+<script type="text/javascript" src="jquery.countdownTimer.js"></script>
+
+<!-- Custom Theme JavaScript -->
+ <script src="localjs.js"></script>
+
+<!-- Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55897928-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
+
+    
+
+
+
+
